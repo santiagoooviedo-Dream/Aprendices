@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENA - Oferta Educativa e Inscripciones 2026</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind Custom Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: {
+                            DEFAULT: '#39A900',
+                            dark: '#2b7a00',
+                            darker: '#1e5400',
+                            light: '#e8f5e9'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased">
+
+    <!-- Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex items-center space-x-3">
+                    <div class="bg-sena text-white p-2.5 rounded-xl shadow-md flex items-center justify-center font-black text-xl tracking-wider">
+                        SENA
+                    </div>
+                    <div>
+                        <span class="block font-bold text-slate-900 leading-tight text-lg">SENA Colombia</span>
+                        <span class="block text-xs text-slate-500 font-medium">Servicio Nacional de Aprendizaje</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 font-medium text-sm text-slate-600">
+                    <a href="#inicio" class="hover:text-sena transition-colors">Inicio</a>
+                    <a href="#oferta" class="hover:text-sena transition-colors">Oferta Educativa</a>
+                    <a href="#modalidades" class="hover:text-sena transition-colors">Modalidades</a>
+                    <a href="#beneficios" class="hover:text-sena transition-colors">Beneficios</a>
+                    <a href="#contacto" class="hover:text-sena transition-colors">Contacto</a>
+                </nav>
+
+                <!-- CTA Button -->
+                <div class="hidden md:block">
+                    <a href="#oferta" class="bg-sena hover:bg-sena-dark text-white font-semibold px-5 py-2.5 rounded-xl shadow-sm transition-all transform hover:-translate-y-0.5 active:translate-y-0 text-sm">
+                        <i class="fa-solid fa-graduation-cap mr-2"></i> Inscríbete Ahora
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-slate-900 focus:outline-none p-2 rounded-lg">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#inicio" class="block py-2 text-slate-600 hover:text-sena font-medium">Inicio</a>
+            <a href="#oferta" class="block py-2 text-slate-600 hover:text-sena font-medium">Oferta Educativa</a>
+            <a href="#modalidades" class="block py-2 text-slate-600 hover:text-sena font-medium">Modalidades</a>
+            <a href="#beneficios" class="block py-2 text-slate-600 hover:text-sena font-medium">Beneficios</a>
+            <a href="#contacto" class="block py-2 text-slate-600 hover:text-sena font-medium">Contacto</a>
+            <a href="#oferta" class="block text-center w-full bg-sena text-white font-semibold py-2.5 rounded-xl mt-2">
+                Inscríbete Ahora
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative bg-gradient-to-br from-slate-900 via-slate-800 to-sena-darker text-white py-20 lg:py-32 overflow-hidden">
+        <!-- Background Overlay Image -->
+        <div class="absolute inset-0 opacity-20 bg-cover bg-center mix-blend-overlay" style="background-image: url('https://placehold.co/1920x1080/1e5400/ffffff?text=SENA+Educacion');"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-sena/20 border border-sena/40 text-emerald-300 px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wide uppercase">
+                        <i class="fa-solid fa-bullhorn text-sena"></i>
+                        <span>¡Convocatoria Abierta 2026!</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        Transforma tu futuro con educación <span class="text-sena underline decoration-wavy decoration-emerald-500">100% gratuita</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl">
+                        Estudia en el SENA y adquiere las habilidades técnicas y tecnológicas que demanda el mercado laboral actual en Colombia. Sin cobros de matrícula ni intermediarios.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#oferta" class="bg-sena hover:bg-sena-dark text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-sena/30 text-center transition-all transform hover:-translate-y-1">
+                            <i class="fa-solid fa-compass mr-2"></i> Ver Cursos Disponibles
+                        </a>
+                        <a href="#beneficios" class="bg-white/10 hover:bg-white/20 border border-white/20 text-white font-semibold px-8 py-4 rounded-xl text-center backdrop-blur-sm transition-all">
+                            Conocer Beneficios
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Stats Card -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-8 rounded-3xl shadow-2xl space-y-6">
+                        <h3 class="text-xl font-bold text-white border-b border-white/10 pb-4">
+                            <i class="fa-solid fa-chart-line text-sena mr-2"></i> Estadísticas Institucionales
+                        </h3>
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-3xl font-extrabold text-sena">+300</span>
+                                <span class="text-xs text-slate-300 font-medium">Programas y Cursos</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-3xl font-extrabold text-sena">100%</span>
+                                <span class="text-xs text-slate-300 font-medium">Gratuito y Oficial</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-3xl font-extrabold text-sena">32</span>
+                                <span class="text-xs text-slate-300 font-medium">Departamentos Cubiertos</span>
+                            </div>
+                            <div class="bg-white/5 p-4 rounded-2xl border border-white/10">
+                                <span class="block text-3xl font-extrabold text-sena">Aliados</span>
+                                <span class="text-xs text-slate-300 font-medium">Empresariales Fuertes</span>
+                            </div>
+                        </div>
+                        <div class="text-xs text-slate-400 text-center">
+                            <i class="fa-solid fa-shield-check text-sena mr-1"></i> Institución adscrita al MinTrabajo de Colombia
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Offering Section -->
+    <section id="oferta" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-sena font-bold uppercase tracking-wider text-sm bg-emerald-50 px-3 py-1 rounded-full">Oferta Académica</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Encuentra el programa ideal para ti</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Filtra por categoría o modalidad y da el primer paso hacia tu futuro profesional.</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12">
+                <button onclick="filterCourses('todos')" class="filter-btn active-filter px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-sena text-white shadow-md">
+                    Todos
+                </button>
+                <button onclick="filterCourses('tecnologo')" class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">
+                    Tecnólogos
+                </button>
+                <button onclick="filterCourses('corto')" class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">
+                    Cursos Cortos
+                </button>
+                <button onclick="filterCourses('virtual')" class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">
+                    Virtuales
+                </button>
+                <button onclick="filterCourses('presencial')" class="filter-btn px-5 py-2.5 rounded-xl font-semibold text-sm transition-all bg-slate-100 hover:bg-slate-200 text-slate-700">
+                    Presenciales
+                </button>
+            </div>
+
+            <!-- Courses Grid -->
+            <div id="courses-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tecnologo virtual">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/39A900/ffffff?text=Tecnologia+ADSO" alt="ADSO" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-sena text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Tecnólogo</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Virtual</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">Análisis y Desarrollo de Software (ADSO)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Aprende a programar, diseñar y gestionar sistemas informáticos y aplicaciones web y móviles de alta demanda.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 24 Meses</span>
+                                <span><i class="fa-solid fa-laptop text-sena mr-1"></i> 100% Virtual</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('Análisis y Desarrollo de Software (ADSO)')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="corto virtual">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/2b7a00/ffffff?text=Ingles+SENA" alt="Inglés" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Curso Corto</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Virtual</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">English Does Work (Nivel Básico a Intermedio)</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Mejora tus competencias comunicativas en el idioma inglés mediante herramientas interactivas y multimedia.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 48 Horas</span>
+                                <span><i class="fa-solid fa-laptop text-sena mr-1"></i> Autoformación</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('English Does Work (Inglés)')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tecnologo presencial">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/1e5400/ffffff?text=Gestion+Logistica" alt="Logística" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-sena text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Tecnólogo</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Presencial</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">Gestión de la Cadena de Suministro y Logística</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Domina la planeación, organización y control de los procesos logísticos nacionales e internacionales.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 24 Meses</span>
+                                <span><i class="fa-solid fa-building text-sena mr-1"></i> Jornada Diurna</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('Gestión de la Cadena de Suministro y Logística')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="corto presencial">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/2b7a00/ffffff?text=Cocina+Colombiana" alt="Cocina" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Curso Corto</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Presencial</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">Gastronomía y Cocina Tradicional Colombiana</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Técnicas culinarias fundamentales, manipulación de alimentos y preparación de platos típicos regionales.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 80 Horas</span>
+                                <span><i class="fa-solid fa-building text-sena mr-1"></i> Centro de Formación</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('Gastronomía y Cocina Tradicional Colombiana')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="tecnologo virtual">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/39A900/ffffff?text=Multimedia+Animacion" alt="Multimedia" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-sena text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Tecnólogo</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Virtual</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">Producción de Multimedia y Animación 3D</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Diseña contenidos visuales, gráficos interactivos, modelado y animación 3D para la industria digital.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 24 Meses</span>
+                                <span><i class="fa-solid fa-laptop text-sena mr-1"></i> 100% Virtual</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('Producción de Multimedia y Animación 3D')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-category="corto virtual">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-slate-100">
+                            <img src="https://placehold.co/600x400/1e5400/ffffff?text=Marketing+Digital" alt="Marketing" class="w-full h-full object-cover">
+                            <span class="absolute top-3 left-3 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-lg uppercase shadow">Curso Corto</span>
+                            <span class="absolute top-3 right-3 bg-slate-900/80 backdrop-blur-sm text-white text-xs font-semibold px-2.5 py-1 rounded-lg">Virtual</span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <h3 class="text-xl font-bold text-slate-900">Marketing Digital y Comercio Electrónico</h3>
+                            <p class="text-slate-600 text-sm leading-relaxed">Estrategias de pauta publicitaria en redes sociales, SEO, analítica web y creación de tiendas online.</p>
+                            <div class="flex items-center space-x-4 text-xs text-slate-500 pt-2 border-t border-slate-100">
+                                <span><i class="fa-solid fa-clock text-sena mr-1"></i> 60 Horas</span>
+                                <span><i class="fa-solid fa-laptop text-sena mr-1"></i> 100% Virtual</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6 pt-0">
+                        <button onclick="openModal('Marketing Digital y Comercio Electrónico')" class="w-full bg-slate-900 hover:bg-sena text-white font-semibold py-3 rounded-xl transition-colors text-sm shadow-sm flex items-center justify-center space-x-2">
+                            <span>Inscribirme al Curso</span>
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modalidades Section -->
+    <section id="modalidades" class="py-20 bg-slate-100 border-y border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sena font-bold uppercase tracking-wider text-sm bg-white px-3 py-1 rounded-full shadow-sm">Flexibilidad</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Modalidades de Estudio Adaptadas a Ti</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Elige cómo quieres formarte de acuerdo con tu disponibilidad y estilo de vida.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Virtual -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between hover:border-sena transition-all">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-emerald-50 text-sena rounded-2xl flex items-center justify-center text-2xl font-bold shadow-sm">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Formación Virtual</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Accede a la plataforma LMS 24/7 desde cualquier lugar del país. Ideal para quienes trabajan o necesitan administrar sus propios horarios de estudio con autonomía y acompañamiento de instructores expertos.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 pt-2">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Sin desplazamiento físico</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Recursos multimedia interactivos</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Foros de discusión y asesorías en vivo</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="#oferta" class="text-sena font-semibold hover:text-sena-dark flex items-center text-sm">
+                            Ver programas virtuales <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Presencial -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 flex flex-col justify-between hover:border-sena transition-all">
+                    <div class="space-y-4">
+                        <div class="w-14 h-14 bg-emerald-50 text-sena rounded-2xl flex items-center justify-center text-2xl font-bold shadow-sm">
+                            <i class="fa-solid fa-school"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900">Formación Presencial</h3>
+                        <p class="text-slate-600 leading-relaxed">
+                            Aprende haciendo en los modernos centros de formación dotados con laboratorios especializados, talleres, maquinaria industrial y ambientes reales de trabajo en todo el territorio nacional.
+                        </p>
+                        <ul class="space-y-2 text-sm text-slate-700 pt-2">
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Práctica directa con equipos profesionales</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Interacción constante con compañeros e instructores</li>
+                            <li class="flex items-center"><i class="fa-solid fa-check text-sena mr-2"></i> Oportunidad de etapas prácticas empresariales</li>
+                        </ul>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-slate-100">
+                        <a href="#oferta" class="text-sena font-semibold hover:text-sena-dark flex items-center text-sm">
+                            Ver programas presenciales <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-sena font-bold uppercase tracking-wider text-sm bg-emerald-50 px-3 py-1 rounded-full">¿Por qué estudiar en el SENA?</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-3">Beneficios de formarte con nosotros</h2>
+                <p class="text-slate-600 mt-2 text-base sm:text-lg">Somos la entidad pública de formación técnica más querida y respetada por los colombianos.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sena/10 text-sena rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">100% Gratuito</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Ninguno de nuestros programas tiene costo de matrícula ni mensualidades. Sin intermediarios ni pagos ocultos.</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sena/10 text-sena rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Titulación Oficial</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Obtén certificaciones con aval y reconocimiento a nivel nacional e internacional valoradas por el sector empresarial.</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sena/10 text-sena rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Agencia de Empleo</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Accede a nuestra agencia pública de empleo y alianzas estratégicas para facilitar tu inserción en el mercado laboral.</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+                    <div class="w-12 h-12 bg-sena/10 text-sena rounded-xl flex items-center justify-center text-xl font-bold">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-slate-900">Sin Intermediarios</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">Las inscripciones son totalmente directas y gratuitas a través de nuestros canales oficiales autorizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / CTA Banner Section -->
+    <section id="contacto" class="py-16 bg-sena text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">¿Tienes dudas sobre tu proceso de inscripción?</h2>
+            <p class="text-emerald-100 max-w-2xl mx-auto text-base sm:text-lg">Nuestro equipo de atención al ciudadano está listo para guiarte en cada paso de tu postulación.</p>
+            <div class="flex flex-wrap justify-center gap-4 pt-2">
+                <a href="tel:018000910270" class="bg-white text-sena hover:bg-emerald-50 font-bold px-6 py-3.5 rounded-xl shadow transition-all">
+                    <i class="fa-solid fa-phone mr-2"></i> Llímanos Gratis: 01 8000 910 270
+                </a>
+                <a href="#oferta" class="bg-sena-darker hover:bg-black text-white font-bold px-6 py-3.5 rounded-xl shadow transition-all border border-emerald-600">
+                    <i class="fa-solid fa-envelope mr-2"></i> Consultar Convocatorias
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-3">
+                        <div class="bg-sena text-white p-2 rounded-lg font-bold">SENA</div>
+                        <span class="text-white font-bold text-lg">Servicio Nacional de Aprendizaje</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Institución pública de educación técnica, tecnológica y complementaria adscrita al Ministerio del Trabajo de Colombia.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Enlaces Rápidos</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#inicio" class="hover:text-white transition-colors">Inicio</a></li>
+                        <li><a href="#oferta" class="hover:text-white transition-colors">Oferta Educativa</a></li>
+                        <li><a href="#modalidades" class="hover:text-white transition-colors">Modalidades</a></li>
+                        <li><a href="#beneficios" class="hover:text-white transition-colors">Beneficios</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Normativa y Legal</h4>
+                    <ul class="space-y-2 text-xs">
+                        <li><a href="#" class="hover:text-white transition-colors">Transparencia y Acceso a la Información</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Política de Privacidad y Términos</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Atención al Ciudadano</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">PQRSDF</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h4 class="text-white font-semibold text-sm mb-4 uppercase tracking-wider">Redes Institucionales</h4>
+                    <div class="flex space-x-3">
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-sena text-white rounded-lg flex items-center justify-center transition-colors"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-sena text-white rounded-lg flex items-center justify-center transition-colors"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-sena text-white rounded-lg flex items-center justify-center transition-colors"><i class="fa-brands fa-instagram text-sm"></i></a>
+                        <a href="#" class="w-9 h-9 bg-slate-800 hover:bg-sena text-white rounded-lg flex items-center justify-center transition-colors"><i class="fa-brands fa-youtube text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 SENA Colombia. Todos los derechos reservados.</p>
+                <p class="mt-2 sm:mt-0">Diseño institucional adaptativo y responsivo.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Registration Modal -->
+    <div id="registration-modal" class="fixed inset-0 z-50 hidden bg-slate-900/60 backdrop-blur-sm overflow-y-auto px-4 py-6 flex items-center justify-center">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-lg w-full overflow-hidden border border-slate-100 transform transition-all">
+            <!-- Modal Header -->
+            <div class="bg-slate-900 text-white p-6 flex items-center justify-between">
+                <div>
+                    <span class="text-xs text-sena font-bold uppercase tracking-wider">Inscripción en Línea</span>
+                    <h3 id="modal-course-title" class="text-xl font-bold mt-1">Formulario de Registro</h3>
+                </div>
+                <button onclick="closeModal()" class="text-slate-400 hover:text-white p-2 rounded-xl focus:outline-none">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Modal Form -->
+            <form id="registration-form" onsubmit="handleFormSubmit(event)" class="p-6 space-y-4">
+                <input type="hidden" id="selected-course-input" name="course">
+
+                <div class="space-y-1">
+                    <label class="block text-xs font-bold text-slate-700 uppercase">Nombre Completo *</label>
+                    <input type="text" id="nombre" required placeholder="Ej. Ana María Pérez" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">Tipo de Documento *</label>
+                        <select id="tipo-doc" required class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                            <option value="">Seleccione...</option>
+                            <option value="CC">Cédula de Ciudadanía</option>
+                            <option value="TI">Tarjeta de Identidad</option>
+                            <option value="CE">Cédula de Extranjería</option>
+                            <option value="PEP">PEP / PPT</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">Número de Documento *</label>
+                        <input type="text" id="num-doc" required placeholder="Ej. 1020304050" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">Correo Electrónico *</label>
+                        <input type="email" id="correo" required placeholder="correo@ejemplo.com" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="block text-xs font-bold text-slate-700 uppercase">Teléfono / Celular *</label>
+                        <input type="tel" id="telefono" required placeholder="3001234567" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                    </div>
+                </div>
+
+                <div class="space-y-1">
+                    <label class="block text-xs font-bold text-slate-700 uppercase">Ciudad / Municipio de Residencia *</label>
+                    <input type="text" id="ciudad" required placeholder="Ej. Bogotá D.C., Medellín, Cali..." class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-sena focus:bg-white transition-colors">
+                </div>
+
+                <div class="pt-4">
+                    <button type="submit" class="w-full bg-sena hover:bg-sena-dark text-white font-bold py-3.5 rounded-xl shadow-md transition-all text-sm flex items-center justify-center space-x-2">
+                        <span>Completar Inscripción</span>
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <p class="text-[11px] text-slate-400 text-center mt-3">Al inscribirte aceptas el tratamiento de datos personales bajo las políticas institucionales del SENA.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 space-y-4 pointer-events-none"></div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking a link
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Course filtering function
+        function filterCourses(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-sena', 'text-white', 'shadow-md');
+                btn.classList.add('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+            });
+
+            // Highlight clicked button
+            event.target.classList.remove('bg-slate-100', 'text-slate-700', 'hover:bg-slate-200');
+            event.target.classList.add('bg-sena', 'text-white', 'shadow-md');
+
+            const cards = document.querySelectorAll('.course-card');
+            cards.forEach(card => {
+                const categories = card.getAttribute('data-category');
+                if (category === 'todos' || categories.includes(category)) {
+                    card.style.display = 'flex';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Modal handling functions
+        const modal = document.getElementById('registration-modal');
+        const modalCourseTitle = document.getElementById('modal-course-title');
+        const selectedCourseInput = document.getElementById('selected-course-input');
+
+        function openModal(courseName) {
+            modalCourseTitle.textContent = courseName;
+            selectedCourseInput.value = courseName;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+            document.getElementById('registration-form').reset();
+        }
+
+        // Close modal when clicking outside the modal box
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        // Form submission & Validation with toast notification and random tracking code
+        function handleFormSubmit(event) {
+            event.preventDefault();
+
+            // Simple validation check
+            const nombre = document.getElementById('nombre').value.trim();
+            const tipoDoc = document.getElementById('tipo-doc').value;
+            const numDoc = document.getElementById('num-doc').value.trim();
+            const correo = document.getElementById('correo').value.trim();
+            const telefono = document.getElementById('telefono').value.trim();
+            const ciudad = document.getElementById('ciudad').value.trim();
+            const course = selectedCourseInput.value;
+
+            if (!nombre || !tipoDoc || !numDoc || !correo || !telefono || !ciudad) {
+                showToast('Por favor completa todos los campos requeridos.', 'error');
+                return;
+            }
+
+            // Generate random radicado tracking code
+            const randomCode = 'SENA-2026-' + Math.floor(100000 + Math.random() * 900000);
+
+            closeModal();
+
+            // Show success toast with radicado
+            showToast(`¡Inscripción exitosa! Tu número de radicado es <b>${randomCode}</b>. Te hemos enviado los detalles a ${correo}.`, 'success', 8000);
+        }
+
+        // Toast Notification Function
+        function showToast(message, type = 'success', duration = 5000) {
+            const container = document.getElementById('toast-container');
+            const toast = document.createElement('div');
+            
+            const bgClass = type === 'success' ? 'bg-slate-900 border-sena text-white' : 'bg-red-600 border-red-700 text-white';
+            const iconClass = type === 'success' ? 'fa-circle-check text-sena' : 'fa-circle-exclamation text-white';
+
+            toast.className = `pointer-events-auto transform transition-all duration-300 translate-y-2 opacity-0 max-w-md w-full ${bgClass} border-l-4 p-5 rounded-2xl shadow-2xl flex items-start space-x-3`;
+            
+            toast.innerHTML = `
+                <div class="text-xl pt-0.5"><i class="fa-solid ${iconClass}"></i></div>
+                <div class="flex-1 text-sm leading-relaxed">${message}</div>
+                <button onclick="this.parentElement.remove()" class="text-slate-400 hover:text-white text-xs"><i class="fa-solid fa-xmark text-base"></i></button>
+            `;
+
+            container.appendChild(toast);
+
+            // Trigger animation
+            setTimeout(() => {
+                toast.classList.remove('translate-y-2', 'opacity-0');
+            }, 10);
+
+            // Auto dismiss
+            setTimeout(() => {
+                toast.classList.add('translate-y-2', 'opacity-0');
+                setTimeout(() => toast.remove(), 300);
+            }, duration);
+        }
+    </script>
+</body>
+</html>
